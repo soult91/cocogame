@@ -1,0 +1,31 @@
+.header_logo {
+    float: right;
+}
+
+.box_menu {
+    width:1500px;
+}
+.box_buttons{
+    margin-top:20px;
+    float:left;
+}
+
+.menu {
+    border-bottom: solid 3px #FFAA00;
+    padding-left: 100px;
+    box-shadow: 5px 5px 5px grey;
+    background: #FAF8FF;
+}
+
+
+.buttons-menu{
+    color:#323366 !important;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.buttons-menu:hover{
+    color:  #FFAA00 !important;
+    border-left: solid 1px #323366;
+    padding-left: 10px;
+}

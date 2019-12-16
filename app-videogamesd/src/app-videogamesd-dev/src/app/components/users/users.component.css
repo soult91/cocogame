@@ -1,0 +1,79 @@
+
+.btn-circle {
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 25px;
+    border:0;
+}
+.button_info {
+	top: 0;
+	background: #323366;
+	padding: 13px 25px;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	border-radius: 50%;
+	box-shadow: 2px 2px 2px grey;
+	border: 0;
+}
+
+.button_del {
+	top: 0;
+	background:#dc3545;
+	padding: 13px 21px;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	border-radius: 50%;
+	box-shadow: 2px 2px 2px grey;
+	border: 0;
+}
+
+.link_user{
+    
+    padding-top: 26px !important;
+    color: grey;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.link_user:hover{
+    color:  #FFAA00 !important;
+    text-decoration: none;
+}
+
+.box {
+    margin-left:200px;
+    margin-top: 50px;
+}
+
+.titles{
+    border:0;
+    background: #FFAA00;
+    color: #323366;
+    font-size: 20px;
+}
+
+.data {
+    padding-top: 26px !important;
+    border-bottom: solid 2px #323366;
+    color: grey;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.border_td{
+    
+    border-bottom: solid 2px #323366;
+}
+
+.table {
+    background: #FAF8FF;
+}
+
+.paginate_button {
+    background: #323366 !important;
+}

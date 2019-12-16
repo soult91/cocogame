@@ -1,0 +1,134 @@
+#graph {
+	min-width: 310px;
+	width: 1500px;
+	height: 300px;
+	margin: 0 auto
+}
+
+.body {
+	width: 1500px;
+	height: auto;
+}
+
+.box {
+	width: 1200px;
+	height: auto;
+	margin-top: 50px;
+}
+
+.info_user {
+	width: 425px;
+	height: 500px;
+	float: left;
+	text-align: left;
+	padding: 20px;
+	margin-left: 100px;
+	background: #FAF8FF;
+}
+
+.canvas {
+	width: 900px !important;
+	height: 400px !important;
+}
+
+.space_but {
+	margin: 14px;
+}
+
+.buttons {
+	float: left;
+	margin-left: 35px;
+}
+
+.buttons_levels {
+	border-radius: 35px;
+	color: white;
+}
+
+.box_but_lvl {
+	float: right;
+	margin-right: 210px;
+}
+
+.title_data_user {
+	color: #FFAA00;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.title_user {
+	color: #323366;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.data_user {
+	color: #323366;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.button_game {
+	top: 0;
+	padding: 20px;
+	background: #323366;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px grey;
+	border: 0;
+}
+
+.disabled-game {
+	top: 0;
+	padding: 20px;
+	background: #868686;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px grey;
+	border: 0;
+}
+
+.button_lvl {
+	top: 0;
+	background: #FFAA00;
+	padding: 20px 30px;
+	color: white;
+	font-size: 25px;
+	font-weight: bold;
+	border-radius: 50%;
+	box-shadow: 2px 2px 2px grey;
+	border: 0;
+}
+
+.disabled-lvl {
+	top: 0;
+	background: #868686;
+	padding: 20px 30px;
+	color: white;
+	font-size: 25px;
+	font-weight: bold;
+	border-radius: 50%;
+	box-shadow: 2px 2px 2px grey;
+	border: 0;
+}
+
+.info_graph {
+	width: 930px;
+	height: 400px;
+	display: inline-grid;
+	margin-left: 30px;
+}
+
+.text_info {
+	color: grey;
+	font-size: 30px;
+	font-weight: 35px;
+	margin-top:150px;
+}
+/* Amarillo: #FFAA00 */
+
+/* Azul #323366 */

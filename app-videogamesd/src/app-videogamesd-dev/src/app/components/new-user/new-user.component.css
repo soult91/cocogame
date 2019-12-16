@@ -1,0 +1,96 @@
+.new_user{
+    width: 70% !important;
+    float: right;
+    border: 0;
+    border-bottom: solid 1px  #FFAA00;
+    border-radius: 0;
+    box-shadow: 0 0 0 0;
+    color: grey;
+    font-size: 18px;
+}
+
+.title_form {
+    color:#323366;
+    text-shadow: 2px 2px 2px grey;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top:20px;
+}
+  
+.lab-new-user {
+    float: left;
+    font-size: 19px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #323366;
+}
+
+.form-new-user {
+    width: 750px;
+    margin-top: 30px;
+    display: flow-root;
+}
+
+.btn-add {
+    float:left;
+    margin-top: 30px;
+    margin-left: 400px;
+}
+
+.invalid-new-user {
+    display: inline-block !important;
+}
+
+.check-games {
+    float: right;
+    margin: 0;
+}
+
+.checks-box {
+    width: 550px;
+    float: right;
+    padding-left: 40px;
+}
+
+.check-gen {
+    margin-left:250px;
+    text-align: justify;
+}
+
+.success {
+    
+    margin-top: 30px;
+    font-size: 20px;
+    color: yellowgreen;
+    font-weight: bold;
+}
+
+
+.error {
+    margin-top: 30px;
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+}
+
+.form-gb-new-user {
+    width:50%;
+    float:left;
+    margin-left: 450px;
+}
+
+.box-avatar {
+    width: 50%;
+    float: right;
+}
+
+.new-user-global {
+    width: 100%;
+}
+
+.btn {
+    background: #323366;
+    width: 100px;
+    color: white;
+    font-size: 18px;
+}

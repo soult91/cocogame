@@ -1,0 +1,94 @@
+<app-header></app-header>
+<!-- aqui ira la imagen del usuario -->
+
+<h1 class="title_form">Nuevo usuario</h1>
+
+
+<div *ngIf="success" class="success">El usuario ha sido añadido con éxito</div>
+<div *ngIf="error" class="success">Ha habido un error añadiendo al usuario</div>
+
+
+<div class="form-gb-new-user form-group ">
+    <form [formGroup]="registerForm" #myForm="ngForm" class="form-group form-new-user" (ngSubmit)="addUser($event) ">
+
+        <div class="form-group form-new-user">
+            <label class="lab-new-user">Nombre y apellidos *</label>
+            <input type="text" formControlName="name" class="form-control  new_user"
+                [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+            <div *ngIf="submitted && f.name.errors" class="invalid-feedback invalid-new-user invalid-new-user">
+                <div *ngIf="f.name.errors.required">Es necesario rellenar el nombre.</div>
+            </div>
+        </div>
+        <div class="form-group form-new-user">
+            <label class="lab-new-user">Username *</label>
+            <input type="text" formControlName="username" class="form-control  new_user"
+                [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+            <div *ngIf="submitted && f.username.errors" class="invalid-feedback invalid-new-user">
+                <div *ngIf="f.username.errors.required">Es necesario rellenar el username.</div>
+            </div>
+        </div>
+        <div class="form-group form-new-user">
+            <label class="lab-new-user">Email *</label>
+            <input type="email" formControlName="email" class="form-control new_user"
+                [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback invalid-new-user">
+                <div *ngIf="f.email.errors.required">Es necesario rellenar el email.</div>
+                <div *ngIf="f.email.errors.email">Debe ser una dirección de correo válida.</div>
+            </div>
+        </div>
+        <div class="form-group form-new-user">
+            <label class="lab-new-user">Fecha de nacimiento *</label>
+            <input type="date" formControlName="birthdate" class="form-control new_user"
+                [ngClass]="{ 'is-invalid': submitted && f.birthdate.errors }" />
+            <div *ngIf="submitted && f.birthdate.errors" class="invalid-feedback invalid-new-user">
+                <div *ngIf="f.birthdate.errors.required">Es necesario rellenar la fecha de nacimiento.</div>
+            </div>
+        </div>
+        <!-- <div class="form-group form-new-user check-games" formGroupName="games">
+                <label class="lab-new-user">Games</label>
+                <div class="form-group check-gen">
+                <div class="form-check" formGroupName="planificacion">
+                    <div>
+                        <input class="form-check-input" (click)="uncheck($event)" [checked]="isChecked" formControlName="subscribed" type="radio" id="blankRadio1" value="{{isChecked}}" aria-label="Planificación">
+                        <label class="form-check-label" for="blankRadio1">Planificación</label>
+                    </div>
+                </div>
+                <div class="form-check" formGroupName="memoria">
+                    <div>
+                        <input class="form-check-input" (click)="uncheck1($event)" [checked]="isChecked1" formControlName="subscribed" type="radio"  id="blankRadio2" value="{{isChecked1}}" aria-label="Memoria">
+                        <label class="form-check-label" for="blankRadio2">Memoria</label>
+                    </div>
+                </div>
+            </div>
+                <div *ngIf="submitted && f.birthdate.errors" class="invalid-feedback invalid-new-user">
+                    <div *ngIf="f.birthdate.errors.required">Es necesario rellenar la fecha de nacimiento.</div>
+                </div>
+        </div> -->
+        <div class="form-group form-new-user">
+            <label class="lab-new-user">Contraseña *</label>
+            <input type="password" formControlName="password" s class="form-control new_user"
+                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback invalid-new-user">
+                <div *ngIf="f.password.errors.required">Es necesario introducir una contraseña.</div>
+                <div *ngIf="f.password.errors.minlength">La contraseña debe contener al menos 6 dígitos.</div>
+            </div>
+        </div>
+        <div class="form-group form-new-user">
+            <label class="lab-new-user">Confirmar contraseña *</label>
+            <input type="password" formControlName="confirmPassword" class="form-control new_user"
+                [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
+            <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback invalid-new-user">
+                <div *ngIf="f.confirmPassword.errors.required">Es necesario confirmar la contraseña</div>
+                <div *ngIf="f.confirmPassword.errors.mustMatch">Esta contraseña y la anterior deben ser iguales. </div>
+            </div>
+        </div>
+        <div class="form-group btn-add">
+            <!-- ngDisable="formfull" -->
+            <button class="btn">Añadir</button>
+        </div>
+    </form>
+</div>
+
+<div class="box-avatar">
+
+</div>

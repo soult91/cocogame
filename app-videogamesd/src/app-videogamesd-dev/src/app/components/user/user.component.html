@@ -1,0 +1,79 @@
+<app-header></app-header>
+
+
+
+<!-- Datos del usuario -->
+<div class="box" id="box">
+
+    <div id="info_user" class="info_user">
+        <div class="title_user">{{user.name}}</div>
+        <br>
+        <strong class="title_data_user">Nombre de usuario: </strong>
+        <p class="data_user">{{user.username}}</p>
+        <strong class="title_data_user">Fecha de cumpleaños: </strong>
+        <p class="data_user">{{user.birthdate}}</p>
+        <strong class="title_data_user">Fecha de inicio: </strong>
+        <p class="data_user">{{user.init_date}}</p>
+        <strong class="title_data_user">Email: </strong>
+        <p class="data_user">{{user.email}}</p>
+    </div>
+
+</div>
+
+<div class="buttons">
+    <button (click)="levelsBathroom()" class="button_game space_but" [ngClass]="{'disabled-game': dress}">¡Al
+        baño!</button>
+    <button (click)="levelsDress()" class="button_game space_but" [ngClass]="{'disabled-game': bathroom}">Hora de
+        vestirse</button>
+</div>
+
+<div *ngIf="bathroom && !dress" class="box_but_lvl">
+    <button id="lvlBath1" (click)="activeBathLvl0()" class="button_lvl space_but buttons_levels"
+        [ngClass]="{'disabled-lvl': bathLvl2 || bathLvl1}">1</button>
+    <button id="lvlBath2" (click)="activeBathLvl1()" class="button_lvl space_but buttons_levels"
+        [ngClass]="{'disabled-lvl': bathLvl0 || bathLvl2}">2</button>
+    <button id="lvlBath3" (click)="activeBathLvl2()" class="button_lvl space_but buttons_levels"
+        [ngClass]="{'disabled-lvl': bathLvl0 || bathLvl1}">3</button>
+</div>
+
+<div *ngIf="dress && !bathroom" class="box_but_lvl">
+    <button id="lvlDress1" (click)="activeDressLvl0()" class="button_lvl space_but buttons_levels"
+        [ngClass]="{'disabled-lvl': dressLvl2 || dressLvl1}">1</button>
+    <button id="lvlDress2" (click)="activeDressLvl1()" class="button_lvl space_but buttons_levels"
+        [ngClass]="{'disabled-lvl':  dressLvl0 || dressLvl2}">2</button>
+    <button id="lvlDress3" (click)="activeDressLvl2()" class="button_lvl space_but buttons_levels"
+        [ngClass]="{'disabled-lvl': dressLvl0 || dressLvl1}">3</button>
+</div>
+
+<!-- Graphs bathroom -->
+<div [hidden]="!bathLvl0 || !bathroom" id="graph_bathroom" class="chart"
+    style="position: relative; height:40vh; width:70vw; margin-left: 580px; margin-top:150px;">
+    <canvas id="canvas" class="canvas">{{ LinechartBath }}</canvas>
+</div>
+<div [hidden]="!bathLvl1 || !bathroom" id="graph_bathroom1" class="chart"
+style="position: relative; height:40vh; width:70vw; margin-left: 580px; margin-top:150px;">
+<canvas id="canvasBath1" class="canvas">{{ LinechartBath1 }}</canvas>
+</div>
+<div [hidden]="!bathLvl2 || !bathroom" id="graph_bathroom2" class="chart"
+style="position: relative; height:40vh; width:70vw; margin-left: 580px; margin-top:150px;">
+<canvas id="canvasBath2" class="canvas">{{ LinechartBath2 }}</canvas>
+</div>
+
+<!-- Graphs dress -->
+<div [hidden]="!dressLvl0 || !dress" id="graph_dress" class="chart"
+style="position: relative; height:40vh; width:70vw; margin-left: 580px; margin-top:150px;">
+<canvas id="canvasDress0" class="canvas">{{ LinechartDress }}</canvas>
+</div>
+<div [hidden]="!dressLvl1 || !dress" id="graph_dress1" class="chart"
+style="position: relative; height:40vh; width:70vw; margin-left: 580px; margin-top:150px;">
+<canvas id="canvasDress1" class="canvas">{{ LinechartDress1 }}</canvas>
+</div>
+<div [hidden]="!dressLvl2 || !dress" id="graph_dress2" class="chart"
+style="position: relative; height:40vh; width:70vw; margin-left: 580px; margin-top:150px;">
+<canvas id="canvasDress2" class="canvas">{{ LinechartDress2 }}</canvas>
+</div>
+
+
+<div class="info_graph" [hidden]="bathLvl0 || bathLvl1 || bathLvl2 || dressLvl0 || dressLvl1 || dressLvl2 || bathroom || dress">
+        <p class="text_info">Selecciona una gráfica</p>
+</div>
