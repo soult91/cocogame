@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const mongojs = require('mongojs');
-const db = mongojs('mongodb://admintfg:password1234@ds259377.mlab.com:59377/videogame-sd-db', ['users']);
+const db = mongojs('mongodb://user:password@ds259377.mlab.com:59377/videogame-sd-db', ['users']);
 const jwt = require('jsonwebtoken');
 const SECRET_KEY = 'key1234';
 const sha256 = require('js-sha256').sha256;
